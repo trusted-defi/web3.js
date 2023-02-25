@@ -489,6 +489,13 @@ var outputSyncingFormatter = function (result) {
     return result;
 };
 
+// 其实可以不加的
+var outputSendTrustedFormatter = function (result) {
+    result.hash = result.hash;
+    result.report = result.report;
+    return result;
+}
+
 module.exports = {
     inputDefaultBlockNumberFormatter: inputDefaultBlockNumberFormatter,
     inputBlockNumberFormatter: inputBlockNumberFormatter,
@@ -506,6 +513,7 @@ module.exports = {
     outputBlockFormatter: outputBlockFormatter,
     outputLogFormatter: outputLogFormatter,
     outputPostFormatter: outputPostFormatter,
-    outputSyncingFormatter: outputSyncingFormatter
+    outputSyncingFormatter: outputSyncingFormatter,
+    outputSendTrustedFormatter: outputSendTrustedFormatter
 };
 

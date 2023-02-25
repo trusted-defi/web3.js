@@ -480,6 +480,19 @@ var Eth = function Eth() {
             abiCoder: abi
         }),
         new Method({
+            name: 'cryptTrustedTransaction',
+            call: 'eth_cryptTrustedTransaction',
+            params: 1,
+            inputFormatter: [null],
+        }),
+        new Method({
+            name: 'sendTrustedTransaction',
+            call: 'eth_sendTrustedTransaction',
+            params: 1,
+            inputFormatter: [null],
+            outputFormatter: formatter.outputSendTrustedFormatter,
+        }),
+        new Method({
             name: 'signTransaction',
             call: 'eth_signTransaction',
             params: 1,
